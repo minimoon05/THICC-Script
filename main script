@@ -1,5 +1,10 @@
 // T H I C C script
- 
+
+//vars
+var ver = '0.9';
+var pNumber = ig.game.O1667.player.length;
+
+//funcs 
 function stalk(){
 var areaNumber = prompt("Enter a player's area number (check the array) to follow them");
 var posX; var posY;
@@ -7,59 +12,50 @@ setInterval(function(){posX=ig.game.O1667.player[areaNumber].pos.x; posY=ig.game
 setInterval(function(){ig.game.O4187.pos.x=posX; ig.game.O4187.pos.y=posY;}, 1000);
 };
  
-function posXY(){
-ig.game.O4187.say("X: " + ig.game.O4187.pos.x + " Y: " + ig.game.O4187.pos.y);
-};
+function posXY(){ig.game.O4187.say("X: " + ig.game.O4187.pos.x + " Y: " + ig.game.O4187.pos.y);};
  
-function ver(){
-ig.game.O4187.say("version 0.7");
-}
- ;
-function spam(){
-var spam = prompt("What do you want to spam? (Write it a single time)")
-spam = spam + spam
-setInterval(function(){ig.game.O561.O7134(spam);}, .1);
-}; // (weak spam)
+function ver(){ig.game.O4187.say("version " + ver)};
+
+function say(text){ig.game.O561.O7134(text)};
  
-function rankcheck() {
-var chosenRank = prompt("Enter a player's area number to know their rank");
-ig.game.O4187.say("their rank is " + ig.game.O1667.player[chosenRank].rank);
-};
+function rankcheck() {ig.game.O4187.say('your rank is ' + ig.game.O4187.rank);}
  
-function health() {
-setInterval(function(){ig.game.O4187.health=Infinity;}, 1);
-};
+function hp(amount) {ig.game.O4187.health=amount;}
 
-function players() {
-ig.game.O4187.say("there are " + ig.game.O1667.player.length);
-};
-
-var pNumber;
-function dox(){
-pNumber = prompt("Enter a player's area number to get info on them");
-ig.game.O4187.say("name: " + ig.game.O1667.player[pNumber].screenName);
-setTimeout(function(){ig.game.O4187.say("id: " + ig.game.O1667.player[pNumber].id);}, 2000);
-setTimeout(function(){ig.game.O4187.say("isFullAccount: " + ig.game.O1667.player[pNumber].isFullAccount);}, 4000);
-setTimeout(function(){ig.game.O4187.say("isEditorHere: " + ig.game.O1667.player[pNumber].isEditorHere);}, 6000);
-setTimeout(function(){ig.game.O4187.say("xPos: " + ig.game.O1667.player[pNumber].pos.x + " yPos: " + ig.game.O1667.player[pNumber].pos.y)}, 8000);
-};
-
-function grav(){
-var chosenGrav = prompt("Enter a number to change your gravity to (350 is reccomended)")
-ig.game.gravity=chosenGrav;
-};
-
+function players() {ig.game.O4187.say("there are " + ig.game.O1667.player.length);};
+ 
+function grav(grav){ig.game.gravity=grav};
+ 
+function telex(vel){ig.game.O4187.pos.x = ig.game.O4187.pos.x + vel};
+function teley(vel){if (dir = "y") ig.game.O4187.pos.y = ig.game.O4187.pos.y + vel};
+ 
 /* HOW TO USE:
 1. paste the whole script
 2. write one of the following to call the functions:
-health() - makes your health infinite
-rankcheck() - checks the rank of a player
+
+--fun--
 stalk() - ties you to a player number
+say() - globally says something in-game
+suicide() - by far the most useful function
+
+--utility--
+health() - makes your health infinite
+rankcheck() - checks your rank
 ver() - tells you the current version
 posXY() - tells you your X and Y position
-spam() - spams a word of your choice
 players() - tells how many players there are in the world
-suicide() - kill yourself
-dox() - tells you info about a player through their area number (id, name, is full account, is editor, x and y pos)
 grav() - change gravity to a specified number (superjump!)
+
+--special--
+telex(number) - teleport left or right
+teley(number) - teleport up or down
+
+--news--
+Version 0.9:
+# functions are now categorized (fun: not-so-serious functions) (utility: useful functions) (special: unique functions)
+# some functions were removed/changed/transformed:
+# script was reorganized for better readability
+  -"dox" was removed because it is unnefficient and useless compared to network profile checking
+  -"spam" was turned into say() because it was a weak and useless kind of spam
+# some function descriptions in the HOW-TO section were changed for better understandability
 */
