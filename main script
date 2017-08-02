@@ -5,12 +5,7 @@ var ver = '0.9';
 var pNumber = ig.game.O1667.player.length;
 
 //funcs 
-function stalk(){
-var areaNumber = prompt("Enter a player's area number (check the array) to follow them");
-var posX; var posY;
-setInterval(function(){posX=ig.game.O1667.player[areaNumber].pos.x; posY=ig.game.O1667.player[areaNumber].pos.y;}, .1);
-setInterval(function(){ig.game.O4187.pos.x=posX; ig.game.O4187.pos.y=posY;}, 1000);
-};
+function stalk(playernumber, speed){setInterval(function(){ig.game.O4187.pos.x=ig.game.O1667.player[playernumber].pos.x; ig.game.O4187.pos.y=ig.game.O1667.player[playernumber].pos.y;}, speed);
  
 function posXY(){ig.game.O4187.say("X: " + ig.game.O4187.pos.x + " Y: " + ig.game.O4187.pos.y);};
  
