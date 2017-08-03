@@ -2,7 +2,7 @@
 // T H I C C script
 
 //vars
-var ver = '0.9';
+var ver = '1.1';
 var pNumber = ig.game.O1667.player.length;
 
 //funcs 
@@ -48,7 +48,7 @@ telex(number) - teleport left or right
 teley(number) - teleport up or down
 
 --news--
-Version 0.9:
+Version 1.1:
 # functions are now categorized (fun: not-so-serious functions) (utility: useful functions) (special: unique functions)
 # some functions were removed/changed/transformed:
 # script was reorganized for better readability
