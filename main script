@@ -1,3 +1,4 @@
+
 // T H I C C script
 
 //vars
@@ -5,8 +6,9 @@ var ver = '0.9';
 var pNumber = ig.game.O1667.player.length;
 
 //funcs 
-function stalk(playernumber, speed){setInterval(function(){ig.game.O4187.pos.x=ig.game.O1667.player[playernumber].pos.x; ig.game.O4187.pos.y=ig.game.O1667.player[playernumber].pos.y;}, speed);
- 
+function stalk(playernumber, speed)
+{setInterval(function(){ig.game.O4187.pos.x=ig.game.O1667.player[playernumber].pos.x; ig.game.O4187.pos.y=ig.game.O1667.player[playernumber].pos.y;}, speed);};
+
 function posXY(){ig.game.O4187.say("X: " + ig.game.O4187.pos.x + " Y: " + ig.game.O4187.pos.y);};
  
 function ver(){ig.game.O4187.say("version " + ver)};
