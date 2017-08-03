@@ -52,5 +52,6 @@ Version 0.9:
 # script was reorganized for better readability
   -"dox" was removed because it is unnefficient and useless compared to network profile checking
   -"spam" was turned into say() because it was a weak and useless kind of spam
+  -"stalk" was changed due to complaints
 # some function descriptions in the HOW-TO section were changed for better understandability
 */
