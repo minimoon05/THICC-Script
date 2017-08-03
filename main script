@@ -1,4 +1,3 @@
-
 // T H I C C script
 
 //vars
@@ -53,7 +52,8 @@ Version 1.1:
 # some functions were removed/changed/transformed:
 # script was reorganized for better readability
   -"dox" was removed because it is unnefficient and useless compared to network profile checking
-  -"spam" was turned into say() because it was a weak and useless kind of spam
-  -"stalk" was changed due to complaints
+  -"spam" was turned into say(text) because it was a weak and useless kind of spam
+  -"stalk" was changed to stalk(playernumber, speed) due to failwhale complaints
+  -"health" was changed to hp(amount)
 # some function descriptions in the HOW-TO section were changed for better understandability
 */
